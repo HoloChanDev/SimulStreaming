@@ -1,12 +1,12 @@
-from whisper_streaming.base import OnlineProcessorInterface, ASRBase
+from simulstreaming.whisper_streaming.base import OnlineProcessorInterface, ASRBase
 import argparse
 
 import sys
 import logging
 import torch
 
-from simul_whisper.config import AlignAttConfig
-from simul_whisper.simul_whisper import PaddedAlignAttWhisper
+from simulstreaming.simul_whisper.config import AlignAttConfig
+from simulstreaming.simul_whisper.simul_whisper import PaddedAlignAttWhisper
 
 logger = logging.getLogger(__name__)
 
@@ -252,9 +252,9 @@ class SimulWhisperOnline(OnlineProcessorInterface):
         self.is_last = False
         self.model.refresh_segment(complete=True)
         return o
-    
+
 
 if __name__ == "__main__":
 
-    from whisper_streaming.whisper_online_main import main_simulation_from_file
+    from simulstreaming.whisper_streaming.whisper_online_main import main_simulation_from_file
     main_simulation_from_file(simul_asr_factory, add_args=simulwhisper_args)

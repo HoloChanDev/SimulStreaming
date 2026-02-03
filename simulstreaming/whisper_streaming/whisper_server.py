@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from whisper_streaming.whisper_online_main import *
+from simulstreaming.whisper_streaming.whisper_online_main import *
 
 import sys
 import argparse
@@ -14,7 +14,7 @@ SAMPLING_RATE = 16000
 
 ######### Server objects
 
-import whisper_streaming.line_packet as line_packet
+import simulstreaming.whisper_streaming.line_packet as line_packet
 import socket
 
 class Connection:

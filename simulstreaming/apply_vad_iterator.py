@@ -1,6 +1,6 @@
 # for debugging only
 
-from whisper_streaming.whisper_online_main import load_audio_chunk, load_audio
+from simulstreaming.whisper_streaming.whisper_online_main import load_audio_chunk, load_audio
 
 import argparse
 import sys
@@ -19,7 +19,7 @@ args = parser.parse_args()
 SAMPLING_RATE = 16000
 duration = len(load_audio(args.audio_path))/SAMPLING_RATE
 
-from whisper_streaming.silero_vad_iterator import FixedVADIterator
+from simulstreaming.whisper_streaming.silero_vad_iterator import FixedVADIterator
 import torch
 model, _ = torch.hub.load(
     repo_or_dir='snakers4/silero-vad',

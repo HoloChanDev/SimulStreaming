@@ -1,5 +1,5 @@
-from whisper_streaming.base import OnlineProcessorInterface
-from whisper_streaming.silero_vad_iterator import FixedVADIterator
+from simulstreaming.whisper_streaming.base import OnlineProcessorInterface
+from simulstreaming.whisper_streaming.silero_vad_iterator import FixedVADIterator
 import numpy as np
 
 import logging
