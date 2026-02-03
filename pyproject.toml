@@ -8,7 +8,7 @@ exclude = ["*.wav", "requirements.txt", "uv.lock"]
 
 [project]
 name = "simulstreaming"
-version = "0.1.0"
+version = "0.1.4"
 description = ""
 readme = "README.md"
 requires-python = ">=3.8"
@@ -25,6 +25,10 @@ dependencies = [
     # both Whisper and SimulWhisper. Now supports Triton 2.x and 3.x with compatibility fix
     "triton>=2.0.0;platform_machine=='x86_64' and sys_platform=='linux' or sys_platform=='linux2'",
 ]
+
+[project.scripts]
+simulstreaming = "simulstreaming.simulstreaming_whisper:main"
+simulstreaming_server = "simulstreaming.simulstreaming_whisper_server:main"
 
 [tool.uv.sources]
 torch = [
